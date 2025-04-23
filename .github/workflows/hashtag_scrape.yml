@@ -1,0 +1,32 @@
+name: Run Hashtag Scrapers Every 4 Hours
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'  # every 4 hours
+  workflow_dispatch:      # allows manual trigger
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    env:
+      TIKAPI_KEY: ${{ secrets.TIKAPI_KEY }}
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install python-dotenv pandas
+
+    - name: Run Country Music Scraper
+      run: python scrapers/country_music_scrape.py
+
+    - name: Run Singer Songwriter Scraper
+      run: python scrapers/singer_songwriter_scrape.py
