@@ -10,10 +10,10 @@ from collections import defaultdict
 from tikapi import TikAPI, ValidationException, ResponseException
 
 # Initialize TikAPI with your API key
-api = TikAPI("8mqoTQs1AXfSs6nskRCr5obvsWVytvQ1J0YPvIS1ylfEtl2D")
-User = api.user(
-    accountKey="Xb4NVD7gF78uIvLmOobU7HHDYtCBiLNVLWXhAjAGN4XTl7uJ"
-)
+#api = TikAPI("8mqoTQs1AXfSs6nskRCr5obvsWVytvQ1J0YPvIS1ylfEtl2D")
+#User = api.user(
+#    accountKey="Xb4NVD7gF78uIvLmOobU7HHDYtCBiLNVLWXhAjAGN4XTl7uJ"
+#)
 
 # Get today's date in MM.DD.YY format
 today = datetime.datetime.today().strftime('%m.%d.%y')

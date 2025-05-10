@@ -8,7 +8,7 @@ from openpyxl import load_workbook
 import os
 
 # Initialize TikAPI
-api = TikAPI("8mqoTQs1AXfSs6nskRCr5obvsWVytvQ1J0YPvIS1ylfEtl2D")
+#api = TikAPI("8mqoTQs1AXfSs6nskRCr5obvsWVytvQ1J0YPvIS1ylfEtl2D")
 
 # Function to convert Unix timestamp to a readable format
 def unix_to_readable(timestamp):
